@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .animated-border {
+  width: 120px;
+  height: 4px;
+  background-color: rgba(13, 91, 219, 0.5);
+  border-radius: 2px;
+  position: relative;
+  margin: auto;
+}
+.animated-border::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -1px;
+  height: 6px;
+  width: 16px;
+  border-radius: 4px;
+  background: #0062ff;
+  -webkit-animation-duration: 5s;
+  animation-duration: 5s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-name: animate;
+  animation-name: animate;
+}
+@keyframes animate {
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(100px);
+  }
+}
+    </style>
+</head>
+<body>
+    <div>
+        <h1 class="animated-border">
+
+        </h1>
+    </div>
+</body>
+</html>
